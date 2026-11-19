@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ml-math"
+version = "0.1.0"
+description = "Toán nền tảng cho Machine Learning: ghi chú và notebook thực hành"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
